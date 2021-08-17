@@ -1,0 +1,23 @@
+{
+  "name": "api-rest-with-typescript",
+  "version": "0.0.1",
+  "description": "this project is to apply the knowledge got from an internet blog",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start:dev": "ts-node ./src/server.ts"
+  },
+  "keywords": [
+    "practice"
+  ],
+  "author": "Frank Leonardo Puma Chara",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "ts-node": "^10.2.0",
+    "typescript": "^4.3.5"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.13"
+  }
+}

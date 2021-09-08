@@ -12,13 +12,15 @@ export class UserController {
     }
 
     initRoutes() {
-        this.router.get(this.path, this.getAllUsers)
-        this.router.post(this.path, this.createUser)
+        this.router.get(this.path, this.getAllUsers.bind(this))
+        this.router.post(this.path, this.createUser.bind(this))
     }
 
     getAllUsers(req: Request, res: Response) {
-        console.log(this)
-        res.status(200).json(this.users)
+        const result = {
+            users: this.users
+        }
+        res.status(200).json(result)
     }
 
     createUser(req: Request, res: Response) {

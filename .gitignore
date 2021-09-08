@@ -1,3 +1,8 @@
+
+# modules from node
 node_modules
 /node_modules
 .idea
+
+# env file
+.env

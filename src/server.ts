@@ -1,9 +1,8 @@
-import express, {Request, Response} from "express"
+import {App} from "./app"
+import {UserController} from "./controllers/user.controller"
 
-const app = express()
-
-app.get("/", (req: Request, res: Response) => {
-    res.json({name: "frank"})
-})
-
-app.listen(500)
+const controllers: any[] = [
+    new UserController()
+]
+const myApp = new App(controllers, 3000)
+myApp.listen()
